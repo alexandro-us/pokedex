@@ -22,7 +22,7 @@ class LinearProcessIndicator extends StatelessWidget {
         ),
         AnimatedContainer(
           width: sizePercent,
-          constraints: const BoxConstraints(maxWidth: 220),
+          constraints: BoxConstraints(maxWidth: sizeWidth),
           height: 8,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(13),

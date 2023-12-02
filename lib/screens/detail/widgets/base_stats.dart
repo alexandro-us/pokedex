@@ -30,12 +30,14 @@ class BaseStats extends StatelessWidget {
               Expanded(
                 child: Row(
                   children: [
-                    Text(pokemon.stats[index].stat.name, style: TextStyle(fontWeight: FontWeight.bold, color:primary),),
+                    Text(pokemon.stats[index].stat.name, style: TextStyle(fontWeight: FontWeight.bold, color:primary), overflow: TextOverflow.ellipsis,),
                     const Spacer(),
                     const CustomDivider(height: 20),
-                    const SizedBox(width: 8),
-                    Text(pokemon.stats[index].baseStat.toString(), style: const TextStyle(color: Colors.black87)),
-                    const SizedBox(width: 8)
+                    const SizedBox(width: 4),
+                    SizedBox(
+                      width: 24,
+                      child: Text('${pokemon.stats[index].baseStat}', style: const TextStyle(color: Colors.black87))),
+                    const SizedBox(width: 4)
                   ],
                 )
               ),
